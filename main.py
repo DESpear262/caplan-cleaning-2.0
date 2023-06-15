@@ -18,8 +18,7 @@ XMLInit(destination_file)
 #loop through all files in directory = directory_name
 for path, subdirs, files in tqdm(os.walk(directory_name)):
     for name in files:
-        if checkByline(f"{path}\\{name}"):
-            XMLDump(f"{path}\\{name}", destination_file)
+        XMLDump(f"{path}\\{name}", destination_file)
 
 XMLClose(destination_file)
 
